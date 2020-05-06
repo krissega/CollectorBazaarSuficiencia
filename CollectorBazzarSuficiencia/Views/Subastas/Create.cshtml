@@ -1,0 +1,53 @@
+﻿@model CollectorSuficiencia.Entities.Subasta
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Subasta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PrecioBase" class="control-label"></label>
+                <input asp-for="PrecioBase" class="form-control" />
+                <span asp-validation-for="PrecioBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puntuacion" class="control-label"></label>
+                <input asp-for="Puntuacion" class="form-control" />
+                <span asp-validation-for="Puntuacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inicio" class="control-label"></label>
+                <input asp-for="Inicio" class="form-control" />
+                <span asp-validation-for="Inicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Finaliza" class="control-label"></label>
+                <input asp-for="Finaliza" class="form-control" />
+                <span asp-validation-for="Finaliza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
